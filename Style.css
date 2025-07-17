@@ -1,0 +1,275 @@
+/* --- Wonderland RPG Style --- */
+/* Por: Gemini */
+/* Descrição: Um tema sombrio e misterioso para um RPG inspirado em Alice no País das Maravilhas e nos Arcanos Maiores. */
+
+/* --- Importação de Fontes do Google --- */
+@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Lato:wght@400;700&display=swap');
+
+/* --- Variáveis de Cor (Paleta Misteriosa) --- */
+:root {
+    --cor-fundo-principal: #121018; /* Um roxo quase preto, bem profundo */
+    --cor-fundo-container: #1d1a27; /* Um tom de roxo um pouco mais claro para os containers */
+    --cor-texto-principal: #dcd9e0; /* Cinza claro, para não cansar os olhos */
+    --cor-texto-secundario: #8b839c; /* Roxo acinzentado para detalhes */
+    --cor-destaque-primario: #a484e9; /* Lavanda, para títulos e elementos importantes */
+    --cor-destaque-secundario: #7e57c2; /* Roxo mais intenso para botões e interações */
+    --cor-borda: #3a334d; /* Borda sutil para separar elementos */
+    --cor-sombra: rgba(164, 132, 233, 0.2); /* Sombra com o tom de destaque */
+    --cor-log-divino: #f0e68c; /* Dourado pálido para as mensagens dos deuses */
+}
+
+/* --- Estilos Globais e Reset --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--cor-fundo-principal);
+    color: var(--cor-texto-principal);
+    font-family: 'Lato', sans-serif; /* Fonte principal para leitura */
+    line-height: 1.7;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* --- Tipografia --- */
+h1, h2, h3, h4 {
+    font-family: 'Cinzel Decorative', serif; /* Fonte estilizada para títulos */
+    color: var(--cor-destaque-primario);
+    text-shadow: 0 0 8px var(--cor-sombra);
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 3rem;
+    letter-spacing: 2px;
+}
+
+h2 {
+    font-size: 2.2rem;
+    border-bottom: 1px solid var(--cor-borda);
+    padding-bottom: 10px;
+}
+
+h3 {
+    font-size: 1.5rem;
+    color: var(--cor-destaque-secundario);
+}
+
+h4 {
+    font-size: 1.2rem;
+    color: var(--cor-texto-secundario);
+    margin-top: 25px;
+}
+
+p {
+    margin-bottom: 15px;
+    white-space: pre-wrap; /* Mantém as quebras de linha do JS */
+}
+
+/* --- Layout Principal & Containers --- */
+.conteudo, .container {
+    width: 100%;
+    max-width: 900px;
+    background-color: var(--cor-fundo-container);
+    padding: 30px 40px;
+    border-radius: 12px;
+    border: 1px solid var(--cor-borda);
+    box-shadow: 0 4px 20px var(--cor-sombra);
+}
+
+/* --- Estilos para Index.html (Login/Registro) --- */
+.formulario {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 40px;
+    margin-top: 30px;
+}
+
+.partes-formulario {
+    flex: 1;
+    min-width: 250px;
+    display: flex;
+    flex-direction: column;
+}
+
+.partes-formulario h2 {
+    font-size: 1.8rem;
+}
+
+.mensagem {
+    margin-top: 15px;
+    text-align: center;
+    font-weight: bold;
+    min-height: 20px;
+}
+
+/* --- Estilos para Inicio.html (Criação de Personagem) --- */
+.container p {
+    text-align: center;
+    font-size: 1.2rem;
+    color: var(--cor-texto-secundario);
+}
+
+.container #pontos {
+    color: var(--cor-destaque-primario);
+    font-weight: bold;
+}
+
+.atributos {
+    margin: 30px 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.atributo {
+    display: flex;
+    align-items: center;
+    background-color: var(--cor-fundo-principal);
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid var(--cor-borda);
+}
+
+.atributo span:first-child {
+    flex-grow: 1;
+    font-weight: bold;
+}
+
+.atributo .valor {
+    margin: 0 15px;
+    font-size: 1.2rem;
+    color: var(--cor-destaque-primario);
+}
+
+.atributo .custo {
+    font-size: 0.8rem;
+    color: var(--cor-texto-secundario);
+    margin-left: 10px;
+}
+
+/* --- Estilos para Cenas.html (Jogo Principal) --- */
+#descricao {
+    font-size: 1.1rem;
+    background-color: rgba(0,0,0,0.2);
+    padding: 15px;
+    border-radius: 8px;
+    border-left: 3px solid var(--cor-destaque-secundario);
+    margin-bottom: 30px;
+}
+
+#logDivino {
+    color: var(--cor-log-divino);
+    font-style: italic;
+    text-align: center;
+    padding: 10px;
+    background: linear-gradient(to right, transparent, rgba(240, 230, 140, 0.1), transparent);
+    border-radius: 5px;
+    margin-bottom: 30px;
+}
+
+.caixa {
+    background-color: rgba(0,0,0,0.2);
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid var(--cor-borda);
+    margin-top: 20px;
+}
+
+#status p {
+    margin-bottom: 5px;
+    border-bottom: 1px dashed var(--cor-borda);
+    padding-bottom: 5px;
+}
+
+#status p:last-child {
+    border-bottom: none;
+}
+
+#opcoes {
+    color: var(--cor-destaque-primario);
+    font-weight: bold;
+    text-align: center;
+}
+
+/* --- Elementos Interativos (Botões e Inputs) --- */
+input[type="text"], input[type="password"] {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    background-color: var(--cor-fundo-principal);
+    border: 1px solid var(--cor-borda);
+    border-radius: 6px;
+    color: var(--cor-texto-principal);
+    font-family: 'Lato', sans-serif;
+    font-size: 1rem;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+input[type="text"]:focus, input[type="password"]:focus {
+    outline: none;
+    border-color: var(--cor-destaque-secundario);
+    box-shadow: 0 0 8px var(--cor-sombra);
+}
+
+button {
+    padding: 12px 20px;
+    background-color: var(--cor-destaque-secundario);
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    font-family: 'Lato', sans-serif;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s, box-shadow 0.3s;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: var(--cor-destaque-primario);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px var(--cor-sombra);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+/* Botões de + e - na criação de personagem */
+.atributo button {
+    padding: 5px 10px;
+    min-width: 30px;
+    margin-top: 0;
+}
+
+/* --- Responsividade para Dispositivos Móveis --- */
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+
+    .conteudo, .container {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    h2 {
+        font-size: 1.8rem;
+    }
+    
+    .formulario {
+        flex-direction: column;
+    }
+}

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wonderland</title>
+    <link rel="stylesheet" href="Style.css"/>
+</head>
+<body>
+    <div class="conteudo">
+        <h1>Wonderland</h1>
+        <h2 id="cena"></h2>
+        <p id="descricao"></p>
+        <p id="logDivino"></p>
+        <div class="caixa" id="status">
+            <h3 id="personagem-atual"></h3>
+            <p id ="dinheiro"></p>
+            <p id="titulos"></p>
+            <p id="inventario"></p>
+            <p id="habilidades"></p>
+            <p id="magias"></p>
+            <h4>Atributos</h4>
+            <p id="Vigor"></p>
+            <p id="Força"></p>
+            <p id="Destreza"></p>
+            <p id="Agilidade"></p>
+            <p id="Carisma"></p>
+            <p id="Magia"></p>
+            <p id="Percepção"></p>
+            <p id="Psicológico"></p>
+            <h4>Estado</h4>
+            <p id="Vida"></p>
+            <p id="Determinacao"></p>
+            <p id="Mana"></p>
+            <p id="Modificadores"></p>
+        </div>
+        <div class="caixa" id="grupo-status">
+            <h3>Grupo</h3>
+            <p id="aliado1-status"></p>
+            <p id="aliado2-status"></p>
+            <p id="aliado3-status"></p>
+            <p id="aliado4-status"></p>
+            <p id="aliado5-status"></p>
+        </div>
+        <div class="caixa" id="acoes">
+            <h3>Ações</h3>
+            <p id="opcoes"></p>
+            <input type="text" id="resposta"/>
+            <button onclick="falar()">Enviar</button>
+        </div>
+    </div>
+
+    <script src="Cenas.js"></script>
+</body>
+</html>

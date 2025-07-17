@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wonderland</title>
+    <link rel="stylesheet" href="Style.css"/>
+</head>
+<body>
+    <div class="conteudo">
+        <h1>Wonderland</h1>
+        <div class="formulario">
+            <div class="partes-formulario" id="parte-registro">
+                <h2>Registrar</h2>
+                <input type="text" id="registrar-nome" placeholder="Nome de Usuário"/>
+                <input type="password" id="registrar-senha" placeholder="Senha"/>
+                <button onclick="registrarUsuarios()">Registrar</button>
+                <p class="mensagem" id="mensagem-registro"></p>
+            </div>
+            <div class="partes-formulario" id="parte-entrar">
+                <h2>Entrar</h2>
+                <input type="text" id="entrar-nome" placeholder="Nome de Usuário"/>
+                <input type="password" id="entrar-senha" placeholder="Senha"/>
+                <button onclick="entrarUsuarios()">Entrar</button>
+                <p class="mensagem" id="mensagem-entrar"></p>
+            </div>
+        </div>
+    </div>
+    <script src="Script.js"></script>
+</body>
+</html>
